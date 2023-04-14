@@ -1,38 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+body{
+  background-color: rgb(183, 221, 245);
+  font-family: 'Jost', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .App {
+  margin: 20px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 6px 6px 10px rgba(198, 197, 195, 0.5), -6px -6px 16px rgb(255 255 255 / 50%);
+  border-radius: 30px;
+}
+
+/* header section ----------------------------------------------*/
+
+.header{
+  margin: 0px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin: 0px;
+}
+.balance-text{
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+#balance{
+  margin: 0px;
+  font-size: 27px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Income Expense section ------------------------------------------*/
+
+.inc-exp-container{
+  display: flex;
+  box-shadow: inset 6px 6px 10px rgba(198, 197, 195, 0.5), inset -6px -6px 16px rgb(255 255 255 / 50%);
+  justify-content: space-around;
+  padding: 20px;
+  margin: 20px 10px;
+  border-radius: 20px;
+}
+hr{
+  margin: 0px;
+  border: 1px solid silver;
+}
+.inc-exp{
+  font-size: 13px;
+  letter-spacing: .5px;
+}
+.inc-exp, .money{
+  margin: 0px;
+  text-align: center;
+}
+#money-plus{
+  color: rgb(5, 170, 5);
+}
+#money-minus{
+  color: rgb(189, 7, 7);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* History list section ------------------------------------------*/
+
+.hst, .ant{
+  font-size: 18px;
+  border-bottom: 2px solid rgb(173, 169, 169);
+}
+.list-group{
+  padding: 0px;
+}
+li{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 7px 10px;
+  list-style: none;
+  box-shadow:  6px 6px 10px rgba(198, 197, 195, 0.7), -6px -6px 10px rgb(255 255 255 / 40%);
+  margin: 15px 0px;
+  font-size: 14px;
+}
+.minus{
+  border-right: 3px dotted red;
+}
+.plus{
+  border-right: 3px dotted rgb(28, 168, 58);
+}
+.del-btn{
+  padding: 0px;
+  transition:all .2s ease-in-out;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0;  
+}
+li:hover .del-btn{
+  transition:all .2s ease-in-out;
+  margin: 0px 10px;
+  opacity: 1;
+}
+
+/* Add transaction section--------------------------------------------*/
+
+.form-control{
+  margin: 20px 0px;
+}
+input{
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-family:'Jost', sans-serif;
+  margin: 5px 0px;
+  width: -webkit-fill-available;
+  padding: 10px 20px;
+  background-color: transparent;
+  box-shadow: inset 6px 6px 10px rgba(198, 197, 195, 0.5), inset -6px -6px 10px rgb(255 255 255 / 40%);
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+.add-btn{
+  font-size: 15px;
+  font-family:'Jost', sans-serif;
+  cursor: pointer;
+  box-shadow:  6px 6px 10px rgb(198 197 195 / 50%), -6px -6px 16px rgb(255 255 255 / 50%);
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: transparent;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-btn:active{
+  box-shadow: inset 6px 6px 10px rgb(198, 197, 195), inset -6px -6px 10px rgb(255 255 255 / 50%);
+  font-size: 14.5px;
 }
